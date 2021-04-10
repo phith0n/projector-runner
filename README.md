@@ -15,6 +15,15 @@ docker run -it --rm --name projector \
 
 When the server is launched, you can open `localhost:8887` in the browser to access the app.
 
+Specify the launching Main-Class for the jar archive:
+
+```
+docker run -it --rm --name projector \
+    -p 8887:8887 \
+    -v /path/to/swing-gui-application.jar:/opt/projector/swing-gui-application.jar \
+    tuwen/projector swing-gui-application.jar org.example.Main
+```
+
 ## Demo
 
 A demo for [Godzilla](https://github.com/BeichenDream/Godzilla):
